@@ -1,0 +1,1 @@
+plt.tight_layout()  # 使坐标刻度能够全部显示
