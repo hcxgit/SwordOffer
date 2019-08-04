@@ -2,6 +2,7 @@
 
 if __name__ == '__main__':
 
+    # 大疆
     import sys
     res = []
     while True:
@@ -24,3 +25,6 @@ if __name__ == '__main__':
             res.append(0)
     for i in res:
         print(i)
+
+
+
