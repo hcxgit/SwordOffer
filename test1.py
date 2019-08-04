@@ -1,10 +1,6 @@
 # coding=utf-8
 
 if __name__ == '__main__':
-    # s = sorts()
-    # # s.quick_sort()
-    # arr = list(range(1,4))
-    # s.permutations(arr, 0, len(arr))
 
     import sys
     res = []
