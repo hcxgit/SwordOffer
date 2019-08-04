@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/各种总结/pdf/test1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/swordOffer.iml" afterPath="$PROJECT_DIR$/.idea/swordOffer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/differentSort.py" afterPath="$PROJECT_DIR$/differentSort.py" />
-    </list>
+    <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
