@@ -81,6 +81,28 @@ class sorts:
             alist[larger],alist[root] = alist[root],alist[larger]
             self.adjustHeap(alist,larger,last)  # 递归调整动过的子树
 
+    # 选择排序
+    # 冒泡排序
+    def bubble_sort(self,alist):
+        length = len(alist)
+        for i in range(length):
+            for j in range(length-i-1):
+                if alist[j] > alist[j+1]:
+                    alist[j],alist[j+1] = alist[j+1],alist[j]
+
+    # 插入排序
+    # 希尔排序
+    # 二分查找
+    # 前序遍历
+    # 中序遍历
+    # 后序遍历
+    # 二叉搜索树
+    # 拓扑排序
+    # dijkstra
+    def dijkstra(self):
+        return
+    # Prim
+
     # ----------全排列-------------------
     def permutations(self, arr, start, end):
 
@@ -94,11 +116,12 @@ class sorts:
                 self.permutations(arr, start + 1, end)
                 arr[index], arr[start] = arr[start], arr[index]
 
+    #-------------------------------------
 
 if __name__ == '__main__':
     s = sorts()
-    a = [4,6,2,1,7,89,13,5,4,6]
-    s.heap_sort(a)
+    a = [9,8,7,6,5,4,3]
+    s.bubble_sort(a)
     print(a)
     # arr = list(range(1,4))
     # s.permutations(arr, 0, len(arr))
