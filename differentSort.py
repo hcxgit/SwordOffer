@@ -82,6 +82,15 @@ class sorts:
             self.adjustHeap(alist,larger,last)  # 递归调整动过的子树
 
     # 选择排序
+    def select_sort(self,alist):
+        length = len(alist)
+        for i in range(length):
+            min = i
+            for j in range(i+1,length):
+                if alist[j] < alist[min]:
+                    min = j
+            alist[i],alist[min] = alist[min],alist[i]
+
     # 冒泡排序
     def bubble_sort(self,alist):
         length = len(alist)
@@ -91,6 +100,15 @@ class sorts:
                     alist[j],alist[j+1] = alist[j+1],alist[j]
 
     # 插入排序
+    def insert_sort(self,alist):
+        length = len(alist)
+        for i in range(1,length):
+            position = i
+            currvalue = alist[i]
+            while position > 0 and currvalue < alist[position-1]:
+                alist[position] = alist[position-1]
+                position -= 1
+            alist[position] = currvalue
     # 希尔排序
     # 二分查找
     # 前序遍历
@@ -104,15 +122,18 @@ class sorts:
     # Prim
 
     # ----------全排列-------------------
+    '''
+    eg: permutations([1,2,3,4,5],0,5)
+    '''
     def permutations(self, arr, start, end):
 
         if start == end:
-            # print(arr)
+            print(arr)
             pass
         else:
             for index in range(start, end):
                 arr[index], arr[start] = arr[start], arr[index]
-                print(index,start)
+                # print(index,start)
                 self.permutations(arr, start + 1, end)
                 arr[index], arr[start] = arr[start], arr[index]
 
@@ -123,8 +144,7 @@ class sorts:
 
 if __name__ == '__main__':
     s = sorts()
-    a = [9,8,7,6,5,4,3]
-    s.bubble_sort(a)
+    a = [1,7,3,9,5,5,5,6]
+    s.insert_sort(a)
     print(a)
-    # arr = list(range(1,4))
-    # s.permutations(arr, 0, len(arr))
+
