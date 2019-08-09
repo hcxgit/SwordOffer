@@ -1,6 +1,9 @@
 import numpy as np
 
-
+# ---------------趋势科技第3题--------------
+"""
+            梯度下降法求解线性回归
+"""
 def gradient_descent(X, y, lr=0.01, threshold=1e-3):
     params = np.array([0., 0., 0.])
     th = 1
