@@ -23,16 +23,3 @@ class Solution:
                         max_len = cur_len
                         res = s[l:r+1]    
         return res
-
-    def isPalindrome(self, s):
-        length = len(s)
-        if length <= 1:
-            return True
-        strat, end = 0, length-1
-        while strat < end:
-            if s[strat] == s[end]:
-                strat += 1
-                end -= 1
-            else:
-                return False
-        return True
