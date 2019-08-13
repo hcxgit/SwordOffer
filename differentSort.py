@@ -117,10 +117,7 @@ class sorts:
     # 二叉搜索树
     # 拓扑排序
     # dijkstra
-    def dijkstra(self):
-        return
-    # Prim
-
+    
     # ----------全排列-------------------
     '''
     eg: permutations([1,2,3,4,5],0,5)
