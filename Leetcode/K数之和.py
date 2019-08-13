@@ -21,6 +21,3 @@ if __name__ == "__main__":
     target = 4
     s = kSum(A, k, target)
     print(s)
-
-
-    asfa
