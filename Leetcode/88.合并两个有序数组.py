@@ -7,7 +7,7 @@ class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
         Do not return anything, modify nums1 in-place instead.
-        两个指针，从后往前扫描
+        两个指针，从后往前扫描`
         """
         m,n,mer = m-1,n-1,len(nums1)-1
         while m >= 0 and n >= 0:
