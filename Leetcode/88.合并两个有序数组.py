@@ -4,7 +4,7 @@
 # [88] 合并两个有序数组
 #
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(self, nums1, m: int, nums2, n):
         """
         Do not return anything, modify nums1 in-place instead.
         两个指针，从后往前扫描`
