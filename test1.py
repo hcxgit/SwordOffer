@@ -23,7 +23,7 @@ def gradient_descent(X, y, lr=0.01, threshold=1e-3):
 #
 # Please don't modify any code below.
 #
-if __name__ == "__main__":
+# if __name__ == "__main__":
     # # Code to generate the data/test case
     # n_samples = 10000
     # x_1, x_2 = np.random.random(n_samples), np.random.random(n_samples)
@@ -36,3 +36,35 @@ if __name__ == "__main__":
     # for param in params:
     #     result.append('{:.02f}'.format(param))
     # print(' '.join(result))
+import sys
+import copy
+alist = list(map(int,sys.stdin.readline().strip().split()))
+n,m = alist[0],alist[1]
+alist2 = list(map(int,sys.stdin.readline().strip().split()))
+alist3 = list(map(int,sys.stdin.readline().strip().split()))
+
+def permutations(arr, start, end, res):
+    if start == end:
+        arr1 = copy.copy(arr)
+        res.append(arr1)
+        pass
+    else:
+        for index in range(start, end):
+            arr[index], arr[start] = arr[start], arr[index]
+            # print(index,start)
+            permutations(arr, start + 1, end,res)
+            arr[index], arr[start] = arr[start], arr[index]
+l2 = []
+permutations(alist2,0,len(alist2),l2)
+l3 = []
+permutations(alist3,0,len(alist3),l3)
+r = ' '
+for i in l2:
+    for j in l3:
+        temp = list(map(str,[(i[k]+j[k])%m for k in range(n)]))
+        temp = ''.join(temp)
+        if temp > r:
+            r = temp
+for i in r:
+    print(i,end=' ')
+

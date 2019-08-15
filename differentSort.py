@@ -120,12 +120,14 @@ class sorts:
     
     # ----------全排列-------------------
     '''
-    eg: permutations([1,2,3,4,5],0,5)
+    eg: res = list()   permutations([1,2,3,4,5],0,5)  
     '''
     def permutations(self, arr, start, end):
 
         if start == end:
-            print(arr)
+            # print(arr)
+            arr1 = copy.copy(arr)
+            res.append(arr1)
             pass
         else:
             for index in range(start, end):
@@ -140,8 +142,9 @@ class sorts:
 
 
 if __name__ == '__main__':
+    import copy
     s = sorts()
-    a = [1,7,3,9,5,5,5,6]
-    s.insert_sort(a)
-    print(a)
-
+    res = list()
+    s.permutations([1,3,3,4,5],0,5)
+    # print(res)
+    
