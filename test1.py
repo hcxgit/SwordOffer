@@ -36,35 +36,53 @@ def gradient_descent(X, y, lr=0.01, threshold=1e-3):
     # for param in params:
     #     result.append('{:.02f}'.format(param))
     # print(' '.join(result))
-import sys
-import copy
-alist = list(map(int,sys.stdin.readline().strip().split()))
-n,m = alist[0],alist[1]
+
 alist2 = list(map(int,sys.stdin.readline().strip().split()))
-alist3 = list(map(int,sys.stdin.readline().strip().split()))
-
-def permutations(arr, start, end, res):
-    if start == end:
-        arr1 = copy.copy(arr)
-        res.append(arr1)
-        pass
+import sys
+s = sys.stdin.readline().strip()
+stack = []
+for i in s:
+    if i != ']':
+        stack.append(i)
     else:
-        for index in range(start, end):
-            arr[index], arr[start] = arr[start], arr[index]
-            # print(index,start)
-            permutations(arr, start + 1, end,res)
-            arr[index], arr[start] = arr[start], arr[index]
-l2 = []
-permutations(alist2,0,len(alist2),l2)
-l3 = []
-permutations(alist3,0,len(alist3),l3)
-r = ' '
-for i in l2:
-    for j in l3:
-        temp = list(map(str,[(i[k]+j[k])%m for k in range(n)]))
-        temp = ''.join(temp)
-        if temp > r:
-            r = temp
-for i in r:
-    print(i,end=' ')
+        temp = ''
+        while True:
+            p = stack.pop()
+            if p != '[':
+                temp = p + temp
+            else:
+                temp = temp.split('|')
+                temp = temp[1] * int(temp[0])
+                for j in temp:
+                    stack.append(j)
+                break
+print(''.join(stack))
+        
 
+# import sys
+# [N,L] = list(map(int,sys.stdin.readline().strip().split()))
+# dp = [[0 for i in range(L+1)] for j in range(L+1)]
+# for i in range(N):
+#     [x1, x2] = list(map(int,sys.stdin.readline().strip().split()))
+#     for i in range(x1,min(L+1,x2+1)):
+#         dp[x1][i] = 1
+
+# for j in range(1,L+1):
+#     for k in range(1,j):
+#         if dp[0][k] != 0 and dp[k][j] != 0:
+#             if dp[0][j] != 0:
+#                 dp[0][j] = min(dp[0][k]+dp[k][j],dp[0][j])
+#             else:
+#                 dp[0][j] = dp[0][k]+dp[k][j]
+
+# if dp[0][L] == 0:
+#     print(-1)
+# else:
+#     print(dp[0][L])
+            
+import sys
+N = int(sys.stdin.readline().strip())
+work = list(map(int,sys.stdin.readline().strip().split()))
+sport = list(map(int,sys.stdin.readline().strip().split()))
+dp  = [0 for i in range(N)] # 第i天已经休息的天数
+for i in range(N):
