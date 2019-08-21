@@ -10,8 +10,8 @@ class Solution:
         length= len(s)
         if length < 2:
             return s
-        dp = [[0 for i in range(length)] for j in range(length)]  # dp[i][j]：表示s[i,j]能否构成回文子串(闭环，包括j)
-        
+        # dp[i][j]：表示s[i,j]能否构成回文子串(闭环，包括j)
+        dp = [[0 for i in range(length)] for j in range(length)]          
         res = s[0]
         max_len = 1
         for r in range(1,length):
