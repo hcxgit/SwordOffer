@@ -5,21 +5,22 @@
 #
 class Solution:
     def numDecodings(self, s: str) -> int:
-        # dp[i]: 以 i为结尾的编码方式的总数
-        # dp[i] = dp[i+1] + (1 if ....)  因为0只能和前面的数组和，所以从后往前遍历
-        if s=='':
-            return 1 
-        if s[0] == '0':
-            return 0   
-        if 1 <= int(s) < 10 or s=='20':
-            return 1
-        if 10< int(s) <= 26:
-            return 2
-        s1,s2 = 0,0
-        if 0<int(s[:1])<=26:
-            s1 = self.numDecodings(s[1:])
-        if 0<int(s[:2])<=26:
-            s2 = self.numDecodings(s[2:])
-        return s1+s2
-# if __name__ == "__main__":
-    # print(Solution().numDecodings('12120'))
+        # dp[i]: 以 i为开始的编码方式的总数
+        # dp[i] = dp[i+1] + dp[i+2](if i+2不越界  else +1)  
+        # 因为0只能和前面的数组和，所以从后往前遍历
+        dp = [0 for i in range(len(s))]
+        dp[-1] = 1 if s[-1] != '0' else 0
+        for i in range(len(s)-2,-1,-1):
+            if s[i] == '0':
+                dp[i] = 0
+            else:
+                 # i和i+1合法，则dp[i] = dp[i+1]+dp[i+2] if i+2合法 else +1
+                if 0< int(s[i:i+2]) <= 26:
+                    if i+2 <len(s):
+                        dp[i] = dp[i+1]+dp[i+2]
+                    else:
+                        dp[i] = dp[i+1]+1
+                # i和i+1不合法， dp=dp[i+1]
+                else:
+                    dp[i] = dp[i+1]
+        return dp[0]
