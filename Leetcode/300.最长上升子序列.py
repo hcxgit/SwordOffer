@@ -4,7 +4,7 @@
 # [300] 最长上升子序列
 #
 class Solution:
-    def lengthOfLIS(self, nums: List[int]) -> int:
+    def lengthOfLIS(self, nums) -> int:
         if not nums:
             return 0
         # dp[i]: 以第i个数为结尾的最长上升子序列的长度 
