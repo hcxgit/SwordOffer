@@ -4,7 +4,7 @@
 # [416] 分割等和子集
 #
 class Solution:
-    def canPartition(self, nums: List[int]) -> bool:
+    def canPartition(self, nums) -> bool:
         """
         sums = sum(nums)
         if sums%2 != 0:
