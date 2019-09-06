@@ -4,7 +4,7 @@
 # [47] 全排列 II
 #
 class Solution:
-    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+    def permuteUnique(self, nums):
         res = []
         def backtrack(nums,res_i):
             if not nums:
