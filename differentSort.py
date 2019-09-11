@@ -117,7 +117,9 @@ class sorts:
         #         position -= 1
         #     alist[position] = currvalue
     # 希尔排序
+
     # 二分查找
+    # -------------非递归-----------------
     def two_Search(self,alist,target):
         left,right = 0,len(alist)-1
         while left <=right:
@@ -129,7 +131,17 @@ class sorts:
             else:
                 left = mid + 1
         return False
-
+    #  -------------递归------------------
+    def two_Search2(self,alist,target,left,right):
+        if left > right:
+            return False
+        mid = (left+right)//2
+        if target == alist[mid]:
+            return mid
+        elif target < alist[mid]:
+            return self.two_Search2(alist,target,left,mid-1)
+        else:
+             return self.two_Search2(alist,target,mid+1,right)
     # 前序遍历
     def preOrder(self,root,res):
 
