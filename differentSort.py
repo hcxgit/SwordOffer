@@ -103,26 +103,97 @@ class sorts:
     def insert_sort(self,alist):
         length = len(alist)
         for i in range(1,length):
-            position = i
-            currvalue = alist[i]
-            while position > 0 and currvalue < alist[position-1]:
-                alist[position] = alist[position-1]
-                position -= 1
-            alist[position] = currvalue
+            for j in range(i,0,-1):
+                if alist[j] >= alist[j-1]:
+                    break
+                else:
+                    alist[j],alist[j-1] = alist[j-1],alist[j]
+        # length = len(alist)
+        # for i in range(1,length):
+        #     position = i
+        #     currvalue = alist[i]
+        #     while position > 0 and currvalue < alist[position-1]:
+        #         alist[position] = alist[position-1]
+        #         position -= 1
+        #     alist[position] = currvalue
     # 希尔排序
     # 二分查找
+    def two_Search(self,alist,target):
+        left,right = 0,len(alist)-1
+        while left <=right:
+            mid = (left+right)//2
+            if target == alist[mid]:
+                return mid
+            elif target < alist[mid]:
+                right = mid-1
+            else:
+                left = mid + 1
+        return False
+
     # 前序遍历
+    def preOrder(self,root,res):
+        # 1、----递归-----
+        if not root:
+            return
+        res.append(root.val)
+        if root.left:
+            self.midOrder(root.left,res)
+        if root.right:
+            self.midOrder(root.right,res)
+        # 2、------非递归-------
+
     # 中序遍历
+    def midOrder(self,root,res):
+        # 1、----递归-----
+        if not root:
+            return
+        if root.left:
+            self.preOrder(root.left,res)
+        res.append(root.val)
+        if root.right:
+            self.preOrder(root.right,res)
+        # 2、----非递归-----
+        if not root:
+            return
+        stack = []
+        res = 
+        while stack:
+            while root:
+                stack.append(root)
+                root = root.left
+            if stack:
+                root = stack.pop()
+                res.append(root.val)
+                root = root.right
     # 后序遍历
+    def postOrder(self,root,res):
+        if not root:
+            return
+        if root.left:
+            self.postOrder(root.left,res)
+        if root.right:
+            self.postOrder(root.right,res)
+        res.append(root.val)
     # 二叉搜索树
     # 拓扑排序
     # dijkstra
     
     # ----------全排列-------------------
+    """
+    eg: res = permutations([1,2,3],[],[])
+    """
+    def permutations(self,alist,res,res_i):
+        if len(alist) == 0:
+            res.append(res_i)
+            return res
+        for i in range(len(alist)):
+            res = self.permutations(alist[:i]+alist[i+1:],res,res_i+[alist[i]])
+        return res
     '''
+    方法二：
     eg: res = list()   permutations([1,2,3,4,5],0,5)  
     '''
-    def permutations(self, arr, start, end):
+    def permutations2(self, arr, start, end):
 
         if start == end:
             # print(arr)
@@ -133,7 +204,7 @@ class sorts:
             for index in range(start, end):
                 arr[index], arr[start] = arr[start], arr[index]
                 # print(index,start)
-                self.permutations(arr, start + 1, end)
+                self.permutations2(arr, start + 1, end)
                 arr[index], arr[start] = arr[start], arr[index]
 
     #-------------------------------------
@@ -144,7 +215,9 @@ class sorts:
 if __name__ == '__main__':
     import copy
     s = sorts()
-    res = list()
-    s.permutations([1,3,3,4,5],0,5)
-    # print(res)
+    # res = list()
+    # s.permutations([1,3,3,4,5],0,5)
+    # res = s.permutations([1,2,3],[],[])
+    res = s.two_Search([1,3,5,6,7,8],9)
+    print(res)
     
