@@ -132,7 +132,20 @@ class sorts:
 
     # 前序遍历
     def preOrder(self,root,res):
-        # 1、----递归-----
+
+        # 1、--------非递归---------
+        if not root:
+            return 
+        stack = []
+        while root or stack:
+            while root:
+                res.append(root.val)
+                stack.append(root)
+                root = root.left
+            if stack:
+                root = stack.pop()
+                root = root.right
+        # 2、---------递归----------
         if not root:
             return
         res.append(root.val)
@@ -140,24 +153,14 @@ class sorts:
             self.midOrder(root.left,res)
         if root.right:
             self.midOrder(root.right,res)
-        # 2、------非递归-------
 
     # 中序遍历
     def midOrder(self,root,res):
-        # 1、----递归-----
-        if not root:
-            return
-        if root.left:
-            self.preOrder(root.left,res)
-        res.append(root.val)
-        if root.right:
-            self.preOrder(root.right,res)
-        # 2、----非递归-----
+        # 1、--------非递归--------
         if not root:
             return
         stack = []
-        res = 
-        while stack:
+        while root or stack:
             while root:
                 stack.append(root)
                 root = root.left
@@ -165,8 +168,38 @@ class sorts:
                 root = stack.pop()
                 res.append(root.val)
                 root = root.right
+        # 2、--------递归-----------
+        if not root:
+            return
+        if root.left:
+            self.preOrder(root.left,res)
+        res.append(root.val)
+        if root.right:
+            self.preOrder(root.right,res)
+
     # 后序遍历
     def postOrder(self,root,res):
+        # --------------非递归------------
+        if not root:
+            return
+        stack = []
+        lastVisit = root #最后访问的节点
+        while root or stack:
+            while root:
+                stack.append(root)
+                root = root.left
+            # 查看当前栈顶元素
+            root= stack[-1]
+            # 栈顶元素为空或者其右子节点已经访问过了，则直接输出当前节点
+            if not root.right or root.right == lastVisit:
+                res.append(root.val)
+                stack.pop()
+                # 输出节点后，将此节点作为最后一个访问的节点,root设为none
+                lastVisit = root
+                root = None
+            else:
+                root = root.right
+        # -------------递归-------------
         if not root:
             return
         if root.left:

@@ -26,7 +26,7 @@ class Solution:
             if not root:
                 return
             stack = []
-            while stack:
+            while root or stack:
                 while root:
                     stack.append(root)
                     root = root.left
