@@ -4,7 +4,7 @@
 # [1162] 地图分析
 #
 class Solution:
-    def maxDistance(self, grid: List[List[int]]) -> int:
+    def maxDistance(self, grid) -> int:
         # 1、从左上角遍历，看左上的两个格判断，然后从右下角遍历，根据右下两个格子判断
         line = len(grid[0])
         row = len(grid)

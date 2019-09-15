@@ -11,7 +11,7 @@
 #         self.right = None
 
 class Solution:
-    def isSymmetric(self, root: TreeNode) -> bool:
+    def isSymmetric(self, root) -> bool:
         # 1、递归查看左子树和右子树是否相同，如果左空，返回右是否空；否则如果右空，返回false；
         # 否则如果左等于右，递归查看左的左和右的右以及坐的右和右的左
         if not root:
