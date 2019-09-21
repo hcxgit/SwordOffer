@@ -97,3 +97,5 @@ insert(alist)
 # alist = pailie(['a','b','c'],[],[])
 print(alist)
 print(hex(int('110',base=2)))
+if(x>y) print(x)
+

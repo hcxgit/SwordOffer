@@ -11,7 +11,7 @@ def bag_01(price,weight,bag):
         dp[0][weight[0]] = price[0]
     for i in range(1,length):
         for j in range(1,bag+1):
-            if j < weight[i]: # 放不下
+            if j < weight[i]:# 放不下
                 dp[i][j] = dp[i-1][j]
             else:
                 dp[i][j] = max(dp[i-1][j-weight[i]]+price[i],dp[i-1][j])

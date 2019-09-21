@@ -2,7 +2,7 @@
 # 9个字符一组，每组的第一个字符是标志位，后面8个字符是地址。如果标志位是0，地址逆序，标志位是1地址不变。
 def bm(s):
     res = []
-    for i in range(0,len(s),9):
+    for i in range(0, len(s), 9):
         if s[i] == '0':
             res.append(s[i+1:i+9][::-1])
         else:
@@ -16,14 +16,14 @@ j: 二进制每一位表示一个城市是否被访问过 1001:{1,4}
 """
 def TSP(c):
     n = len(c)
-    d=[[0xffffffff for j in range(1<<n)] for i in range(n)]  
+    d = [[0xffffffff for j in range(1 << n)] for i in range(n)]
     d[0][1] = 0
-    for i in range(1,n):
+    for i in range(1, n):
         d[i][0] = c[i][0]  # 从i出发回到i花费0
 
     # 计算j包含那些顶点,利用与运算
     def find_vertex(j):
-        vertexs=set()
+        vertexs = set()
         for v in range(n):
             if (1<<v)&j!=0:
                 vertexs.add(v) 
@@ -68,19 +68,8 @@ def greedyOne(points):
     l = [i[2] for i in points]
     r = [i[3] for i in points]
     return min(len(set(x)), len(set(y)), len(set(l)), len(set(r)))
- 
-# n = int(input())
-# points = []
-# for i in range(n):
-#     line = input().strip().split()
-#     x = int(line[0])
-#     y = int(line[1])
-#     l = y - x
-#     r = x + y
-#     points.append([x, y, l, r])
-# '''
-# 此部分为随机获取点值，确定自己的动态规划算法是否最优
 
+# 此部分为随机获取点值，确定自己的动态规划算法是否最优
 points = []
 for j in range(10):
     x = randint(0,40)
@@ -93,6 +82,17 @@ res2 = greedyOne(points)
 print('dp is %d, greedy is %d'%(res1, res2))
 if res1 > res2:
     print(points)
+
+# n = int(input())
+# points = []
+# for i in range(n):
+#     line = input().strip().split()
+#     x = int(line[0])
+#     y = int(line[1])
+#     l = y - x
+#     r = x + y
+#     points.append([x, y, l, r])
+# '''
 # '''
 
 # if __name__ == "__main__":
