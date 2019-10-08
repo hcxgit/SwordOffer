@@ -24,5 +24,5 @@ class Solution:
                     if i-dp[i-1]>=2: # 前面超过两个字符，还有可能有
                         dp[i] = dp[i-1]+2+dp[i-dp[i-1]-2]
                     else:
-                        dp[i] = dp[i-1]+2
+                        dp[i] = dp[i-1]+2 
         return max(dp)
