@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="默认">
-      <change afterPath="$PROJECT_DIR$/sort/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/sort.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/src/InsertSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/src/QuickSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/src/SelectSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/swordOffer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort/src/MergeSort.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sort/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/sort/src/BubbleSort.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +33,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="14604c3d-d428-4b83-b982-d2792c33d468" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="y" value="2" />
-    <option name="width" value="1378" />
-    <option name="height" value="733" />
-  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
