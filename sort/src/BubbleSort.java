@@ -3,6 +3,7 @@ import java.util.Arrays;
 /**
  * @author 三笠阿克曼
  * @date 2021/10/21
+ * 冒泡排序：比较，每次选择最大放后面
  */
 public class BubbleSort {
 
@@ -16,9 +17,7 @@ public class BubbleSort {
             flag = false;
             for (int j = 0; j < len - i - 1; j++) {
                 if (list[j] > list[j + 1]) {
-                    temp = list[j + 1];
-                    list[j + 1] = list[j];
-                    list[j] = temp;
+                    Swap.swap(list, j, j + 1);
                     flag = true;
                 }
             }
