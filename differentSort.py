@@ -265,4 +265,5 @@ if __name__ == '__main__':
     # res = s.permutations([1,2,3],[],[])
     res = s.two_Search([1,3,5,6,7,8],9)
     print(res)
+    print(res)
     
