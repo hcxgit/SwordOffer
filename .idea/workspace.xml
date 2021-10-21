@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="默认">
-      <change afterPath="$PROJECT_DIR$/sort/src/HeapSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort/src/BinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort/src/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sort/src/TreeTraveral.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
