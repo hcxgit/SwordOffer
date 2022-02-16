@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="默认">
-      <change afterPath="$PROJECT_DIR$/sort/src/BinarySearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/src/TreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/src/TreeTraveral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristmasTree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChristmasTree2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/src/TreeTraveral.java" beforeDir="false" afterPath="$PROJECT_DIR$/sort/src/TreeTraveral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +34,71 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="14604c3d-d428-4b83-b982-d2792c33d468" />
+  <component name="JupyterTrust" id="bee52edd-7bdc-49fb-976f-d6235123121c" />
+  <component name="ProjectId" id="212KSykTGteTcaxHSUZeXzl3kfW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Python.beike">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gitLocal\SwordOffer\SwordOffer-master" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.ChristmasTree2">
+    <configuration name="ChristmasTree" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Anaconda\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChristmasTree.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ChristmasTree2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Anaconda\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ChristmasTree2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="beike" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="swordOffer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,43 +165,24 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="swordOffer" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/各种总结/pdf" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/各种总结/pdf/test1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.differentSort" />
-      <item itemvalue="Python.test1" />
-      <item itemvalue="Python.test1 (1)" />
       <item itemvalue="Python.beike" />
+      <item itemvalue="Python.differentSort" />
+      <item itemvalue="Python.test1 (1)" />
+      <item itemvalue="Python.ChristmasTree" />
+      <item itemvalue="Python.ChristmasTree2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ChristmasTree2" />
+        <item itemvalue="Python.ChristmasTree" />
         <item itemvalue="Python.beike" />
         <item itemvalue="Python.test1 (1)" />
         <item itemvalue="Python.differentSort" />
-        <item itemvalue="Python.test1" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="" />
@@ -154,6 +190,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563509539101</updated>
+      <workItem from="1637133747932" duration="33000" />
+      <workItem from="1639739521101" duration="25000" />
+      <workItem from="1639739556214" duration="3206000" />
     </task>
     <task id="LOCAL-00001" summary="默认">
       <created>1564928302270</created>
@@ -208,7 +247,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -222,6 +261,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="367" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1634748231199" />
+    <state width="1493" height="47" key="GridCell.Tab.0.bottom" timestamp="1639744178972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="47" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639744178972" />
+    <state width="1493" height="47" key="GridCell.Tab.0.center" timestamp="1639744178972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="47" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1639744178972" />
+    <state width="1493" height="47" key="GridCell.Tab.0.left" timestamp="1639744178972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="47" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1639744178972" />
+    <state width="1493" height="47" key="GridCell.Tab.0.right" timestamp="1639744178972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="47" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1639744178972" />
     <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1634748430559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -230,5 +285,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1634747746105" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SwordOffer_master$ChristmasTree.coverage" NAME="ChristmasTree Coverage Results" MODIFIED="1639740713355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SwordOffer_master$ChristmasTree2.coverage" NAME="ChristmasTree2 Coverage Results" MODIFIED="1639744178960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
