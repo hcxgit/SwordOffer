@@ -47,7 +47,7 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] list = {1, 4, 2, 1, 3, 3, 9};
+        int[] list = {-1,2,-8,-10};
         quickSort(list, 0, list.length - 1);
         System.out.println(Arrays.toString(list));
     }

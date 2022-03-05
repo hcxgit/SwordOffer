@@ -41,13 +41,14 @@ public class HeapSort {
         }
 
         if (largest != root) {
+            //父节点和子节点换位，并调整子树
             Swap.swap(arrays, largest, root);
             heapify(arrays, largest, end);
         }
     }
 
     public static void main(String[] args) {
-        int[] arrays = {1, 4, 2, 1, 3, 3, 9};
+        int[] arrays = {5,2,3,1};
         heapSort(arrays);
         System.out.println(Arrays.toString(arrays));
     }
