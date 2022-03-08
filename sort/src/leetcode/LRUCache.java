@@ -7,7 +7,7 @@ import java.util.Map;
  * @author 三笠阿克曼
  * @date 2022/2/23
  */
-//双向链表+hash表
+//双向链表+hash表: hash表放key和双向链表的节点：Map<Integer, DoubleNode>
 public class LRUCache {
     class DoubleNode {
         int key;
