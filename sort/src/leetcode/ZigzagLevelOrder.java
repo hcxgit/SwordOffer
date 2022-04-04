@@ -1,5 +1,7 @@
 package leetcode;
 
+import datastruct.TreeNode;
+
 import java.util.*;
 
 /**
@@ -55,7 +57,7 @@ public class ZigzagLevelOrder {
                         deque.addLast(curr.left);
                     }
                 }
-                levelList.add(curr.val);
+                levelList.add(curr.data);
             }
             res.add(levelList);
             isOrderLeft = !isOrderLeft;
@@ -77,7 +79,7 @@ public class ZigzagLevelOrder {
             while (stackLeft.size()!= 0){
                 //出栈
                 currNode = stackLeft.pop();
-                levelList.add(currNode.val);
+                levelList.add(currNode.data);
                 //入栈right,先左后右
                 if(currNode.left != null){
                     stackRight.push(currNode.left);
@@ -91,7 +93,7 @@ public class ZigzagLevelOrder {
             while (stackRight.size() != 0){
                 //出栈
                 currNode = stackRight.pop();
-                levelList.add(currNode.val);
+                levelList.add(currNode.data);
                 //入栈right,先右后左
                 if(currNode.right != null){
                     stackLeft.push(currNode.right);
@@ -111,9 +113,9 @@ public class ZigzagLevelOrder {
         ZigzagLevelOrder case1 = new ZigzagLevelOrder();
         TreeNode treeNode15 = new TreeNode(15);
         TreeNode treeNode7 = new TreeNode(7);
-        TreeNode treeNode20 = new TreeNode(20,treeNode15,treeNode7);
+        TreeNode treeNode20 = new TreeNode(treeNode15,treeNode7,20);
         TreeNode treeNode9 = new TreeNode(9);
-        TreeNode treeNode3 = new TreeNode(3,treeNode9,treeNode20);
+        TreeNode treeNode3 = new TreeNode(treeNode9,treeNode20,3);
 
         List<List<Integer>> lists = case1.levelOrder(treeNode3);
         System.out.println(lists);

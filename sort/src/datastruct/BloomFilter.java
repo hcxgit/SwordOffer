@@ -1,4 +1,4 @@
-/**
+package datastruct; /**
  * @author 三笠阿克曼
  * @date 2022/2/11
  * 布隆过滤器

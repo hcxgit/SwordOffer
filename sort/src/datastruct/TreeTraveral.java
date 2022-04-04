@@ -1,3 +1,5 @@
+package datastruct;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -15,12 +17,12 @@ public class TreeTraveral {
             return;
         }
 
-        list.add(root.getdata());
-        if (root.getLeft() != null) {
-            preOrder(root.getLeft(), list);
+        list.add(root.data);
+        if (root.left != null) {
+            preOrder(root.left, list);
         }
-        if (root.getRight() != null) {
-            preOrder(root.getRight(), list);
+        if (root.right != null) {
+            preOrder(root.right, list);
         }
     }
 
@@ -34,12 +36,12 @@ public class TreeTraveral {
         stack.push(root);
         while (!stack.isEmpty()) {
             temp = stack.pop();
-            list.add(temp.getdata());
-            if (temp.getRight() != null) {
-                stack.push(temp.getRight());
+            list.add(temp.data);
+            if (temp.right != null) {
+                stack.push(temp.right);
             }
-            if (temp.getLeft() != null) {
-                stack.push(temp.getLeft());
+            if (temp.left != null) {
+                stack.push(temp.left);
             }
         }
     }
@@ -50,12 +52,12 @@ public class TreeTraveral {
             return;
         }
 
-        if (root.getLeft() != null) {
-            midOrder(root.getLeft(), list);
+        if (root.left != null) {
+            midOrder(root.left, list);
         }
-        list.add(root.getdata());
-        if (root.getRight() != null) {
-            midOrder(root.getRight(), list);
+        list.add(root.data);
+        if (root.right != null) {
+            midOrder(root.right, list);
         }
     }
 
@@ -70,13 +72,13 @@ public class TreeTraveral {
 
             while (root != null) {
                 stack.push(root);
-                root = root.getLeft();
+                root = root.left;
             }
 
             if (!stack.isEmpty()) {
                 temp = stack.pop();
-                list.add(temp.getdata());
-                root = temp.getRight();
+                list.add(temp.data);
+                root = temp.right;
             }
         }
     }
@@ -88,13 +90,13 @@ public class TreeTraveral {
             return;
         }
 
-        if (root.getLeft() != null) {
-            postOrder(root.getLeft(), list);
+        if (root.left != null) {
+            postOrder(root.left, list);
         }
-        if (root.getRight() != null) {
-            postOrder(root.getRight(), list);
+        if (root.right != null) {
+            postOrder(root.right, list);
         }
-        list.add(root.getdata());
+        list.add(root.data);
     }
 
     public static void levelOrder(TreeNode root, ArrayList<Integer> res) {
@@ -106,12 +108,12 @@ public class TreeTraveral {
 
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            res.add(node.getdata());
-            if (node.getLeft() != null) {
-                queue.offer(node.getLeft());
+            res.add(node.data);
+            if (node.left != null) {
+                queue.offer(node.left);
             }
-            if (node.getRight() != null) {
-                queue.offer(node.getRight());
+            if (node.right != null) {
+                queue.offer(node.right);
             }
         }
     }

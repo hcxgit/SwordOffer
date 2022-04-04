@@ -1,3 +1,5 @@
+package datastruct;
+
 /**
  * @author 三笠阿克曼
  * @date 2021/10/21
