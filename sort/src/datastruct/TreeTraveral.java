@@ -1,9 +1,6 @@
 package datastruct;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author 三笠阿克曼
@@ -83,22 +80,36 @@ public class TreeTraveral {
         }
     }
 
-
-    //后序遍历：递归
-    public static void postOrder(TreeNode root, ArrayList<Integer> list) {
-        if (root == null) {
-            return;
+    //Morris 中序遍历：将二叉树退化成链表，全连接在右子树
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        TreeNode pre = null;
+        while(root!=null) {
+            //如果左节点不为空，就将当前节点连带右子树全部挂到
+            //左节点的最右子树下面
+            if(root.left!=null) {
+                pre = root.left;
+                //找到左节点的最右子树
+                while(pre.right!=null) {
+                    pre = pre.right;
+                }
+                //root挂到最右子树下面
+                pre.right = root;
+                //root的left置为新的root
+                TreeNode preRoot = root;
+                root = root.left;
+                //原root左子树置为null
+                preRoot.left = null;
+                //左子树为空，则打印这个节点，并向右边遍历
+            } else {
+                res.add(root.data);
+                root = root.right;
+            }
         }
-
-        if (root.left != null) {
-            postOrder(root.left, list);
-        }
-        if (root.right != null) {
-            postOrder(root.right, list);
-        }
-        list.add(root.data);
+        return res;
     }
 
+    //层序遍历
     public static void levelOrder(TreeNode root, ArrayList<Integer> res) {
         if (root == null) {
             return;
