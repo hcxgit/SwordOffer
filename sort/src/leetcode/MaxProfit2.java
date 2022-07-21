@@ -3,7 +3,7 @@ package leetcode;
 /**
  * @author 三笠阿克曼
  * @date 2022/3/21
- *  Leetcode 122:买股票的最佳时机2（多次买卖,可以当天买当天卖）
+ *  Leetcode 122:买股票的最佳时机2（无交易次数限制）
  *
  *  1、标准动态规划：
  *      dp[i][0] 表示第i天手里【没有股票】获得的最大利润
@@ -33,6 +33,7 @@ package leetcode;
  *      【累加】就是最大利润
  */
 public class MaxProfit2 {
+    //标准dp
     public int maxProfit(int[] prices) {
         int length = prices.length;
         int[][] dp = new int[length][2];
@@ -46,6 +47,7 @@ public class MaxProfit2 {
         return dp[length-1][0];
     }
 
+    //dp优化
     public int maxProfit2(int[] prices) {
         int length = prices.length;
         int dp0 = 0, dp1 = -prices[0];
@@ -57,6 +59,7 @@ public class MaxProfit2 {
         return dp0;
     }
 
+    //3、贪心法
     public int maxProfit3(int[] prices) {
         int length = prices.length;
         int res = 0;
