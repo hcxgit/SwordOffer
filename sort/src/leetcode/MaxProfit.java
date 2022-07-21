@@ -3,7 +3,7 @@ package leetcode;
 /**
  * @author 三笠阿克曼
  * @date 2022/3/21
- *  Leetcode 121:买股票的最佳时机
+ *  Leetcode 121:买股票的最佳时机1（只能买卖一次）
  *
  *  动态规划：
  *    f(i+1) 表示第i+1天买入时的最大利润,
