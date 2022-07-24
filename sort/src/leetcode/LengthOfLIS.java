@@ -14,6 +14,8 @@ package leetcode;
  *          2、找 max(dp[j]) +1
  *
  *     综上：dp[i] = max(dp[j])+1, 其中 0≤j<i 且 num[j]<num[i]
+ *
+ *  2、贪心法 + 二分查找
  */
 public class LengthOfLIS {
     public int lengthOfLIS(int[] nums) {
