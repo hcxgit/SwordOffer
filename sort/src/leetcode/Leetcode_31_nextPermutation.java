@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  *      4、可以断定这时 [j,end) 必然是降序，逆置 [j,end)，使其升序
  *      5、如果在步骤 1 找不到符合的相邻元素对，说明当前 [begin,end) 为一个降序顺序，则直接跳到步骤 4
  */
-public class NextPermutation {
+public class Leetcode_31_nextPermutation {
     public void nextPermutation(int[] nums) {
 
         int len = nums.length;
@@ -62,7 +62,7 @@ public class NextPermutation {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1,3,2};
-        NextPermutation nextPermutation = new NextPermutation();
+        Leetcode_31_nextPermutation nextPermutation = new Leetcode_31_nextPermutation();
         nextPermutation.nextPermutation(nums);
         Arrays.stream(nums).boxed().collect(Collectors.toList()).forEach(System.out::print);
     }

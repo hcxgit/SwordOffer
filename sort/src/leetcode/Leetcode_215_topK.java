@@ -5,7 +5,7 @@ package leetcode;
  * @date 2022/3/5
  * LeetCode 215: 数组中第k个最大元素
  */
-public class TopK {
+public class Leetcode_215_topK {
     public int findKthLargest(int[] nums, int k) {
 //         heapSort(nums,k);
 //         return nums[nums.length-k];
@@ -94,7 +94,7 @@ public class TopK {
         nums[index2] = temp;
     }
     public static void main(String[] args) {
-        TopK case1 = new TopK();
+        Leetcode_215_topK case1 = new Leetcode_215_topK();
         int kthLargest = case1.findKthLargest(new int[]{3, 2, 1, 5, 6, 4}, 2);
         System.out.println(kthLargest);
     }

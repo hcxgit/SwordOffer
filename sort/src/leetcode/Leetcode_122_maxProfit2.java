@@ -32,7 +32,7 @@ package leetcode;
  *      可以当天买当天卖，交易次数不限，所以，只要比前一天贵就卖，【有利可图就卖】
  *      【累加】就是最大利润
  */
-public class MaxProfit2 {
+public class Leetcode_122_maxProfit2 {
     //标准dp
     public int maxProfit(int[] prices) {
         int length = prices.length;

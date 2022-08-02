@@ -9,7 +9,7 @@ import java.util.List;
  * @date 2022/3/6
  * LeetCode 15：三数之和
  */
-public class ThreeSum {
+public class Leetcode_15_threeSum {
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         if(nums == null || nums.length <3){
@@ -56,7 +56,7 @@ public class ThreeSum {
     }
 
     public static void main(String[] args) {
-        List<List<Integer>> lists = ThreeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4});
+        List<List<Integer>> lists = Leetcode_15_threeSum.threeSum(new int[]{-1, 0, 1, 2, -1, -4});
         System.out.println(lists);
     }
 }

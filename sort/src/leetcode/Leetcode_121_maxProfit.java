@@ -14,7 +14,7 @@ package leetcode;
  *     只用到前一天的利润，优化为一个变量dp0表示。
  *
  */
-public class MaxProfit {
+public class Leetcode_121_maxProfit {
 
     //1、标准dp
     public int maxProfit(int[] prices) {

@@ -11,7 +11,7 @@ import datastruct.TreeNode;
  *      最长路径=num-1
  *      递归求左右子树的高度时，更新路径长度
  */
-public class DiameterOfBinaryTree {
+public class Leetcode_543_diameterOfBinaryTree {
     int num;
     public int diameterOfBinaryTree(TreeNode root) {
         if(root == null){

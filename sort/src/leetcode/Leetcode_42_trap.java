@@ -31,14 +31,14 @@ package leetcode;
  *  3、单调栈
  *
  *  4、双指针（对dp的优化）
- *      1、【位置i雨水的量】取决于i【左右两侧最大值的最小值】，min(leftMax, rightMax)
- *          数量为：min(leftMax, rightMax) - height[i];
+ *      1、【位置`i`雨水的量】取决于【`i`左右两侧最大值的最小值】：
+ *          `min(leftMax, rightMax) - height[i];`
  *      2、两个指针left和right，left从左—>右遍历，right从右—>左遍历：
  *          1. 对于left, 它【右侧】的【真实的最大值】 >= rightMax,
  *          2. 对于right, 它【左侧】的【真实的最大值】 >= leftMax.
  *      3、综合1、2,没必要【完全计算所有leftMax，rightMax】，只需要找到：
- *          1. 当出现leftMax < rightMax的时候, 【left的位置】能否接雨水就已经【确定了】,
- *          2. 当出现leftMax >= rightMax的时候, 【right的位置】能否接雨水就已经【确定了】
+ *          1. 当出现leftMax < rightMax的时候, 【left的位置】【能否接雨水】就已经【确定了】,
+ *          2. 当出现leftMax >= rightMax的时候, 【right的位置】【能否接雨水】已经【确定了】
  *
  *
  */

@@ -9,7 +9,7 @@ import java.util.*;
  * @date 2022/3/7
  * Leetcode 203：二叉树的锯齿形层次遍历
  */
-public class ZigzagLevelOrder {
+public class Leetcode_203_zigzagLevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         if(root == null ){
@@ -110,7 +110,7 @@ public class ZigzagLevelOrder {
     }
 
     public static void main(String[] args) {
-        ZigzagLevelOrder case1 = new ZigzagLevelOrder();
+        Leetcode_203_zigzagLevelOrder case1 = new Leetcode_203_zigzagLevelOrder();
         TreeNode treeNode15 = new TreeNode(15);
         TreeNode treeNode7 = new TreeNode(7);
         TreeNode treeNode20 = new TreeNode(treeNode15,treeNode7,20);

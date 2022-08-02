@@ -23,7 +23,7 @@ package leetcode;
  *      expand(s, i, i);  1个点扩展，奇数
  *      expand(s, i, i+1); 2个点扩展，偶数
  */
-public class LongestPalindrome {
+public class Leetcode_5_longestPalindrome {
     //1、动态规划
     public String longestPalindrome2(String s) {
         int len = s.length();
@@ -100,7 +100,7 @@ public class LongestPalindrome {
 
     public static void main(String[] args) {
         String s = "babad";
-        LongestPalindrome longestPalindrome = new LongestPalindrome();
+        Leetcode_5_longestPalindrome longestPalindrome = new Leetcode_5_longestPalindrome();
         String s1 = longestPalindrome.longestPalindrome(s);
         System.out.println(s1);
     }

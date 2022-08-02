@@ -13,10 +13,10 @@ import java.util.LinkedList;
  *      每次stack入栈一个数，minStack入栈当前最小值；
  *      出栈时，两个都出。
  */
-public class MinStack {
+public class Leetcode_155_minStack {
     private Deque<Integer> stack;
     private Deque<Integer> minStack;
-    public MinStack() {
+    public Leetcode_155_minStack() {
         stack = new LinkedList<>();
         minStack = new LinkedList<>();
     }

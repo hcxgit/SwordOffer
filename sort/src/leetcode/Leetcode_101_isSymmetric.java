@@ -19,7 +19,7 @@ import java.util.Scanner;
  *      入队，每次出队比较两个相邻节点
  *      入队时顺序，root1.left、root2.right、root1.right、root2.left
  */
-public class IsSymmetric {
+public class Leetcode_101_isSymmetric {
     public static boolean isSymmetric(TreeNode root){
         return check(root.left,root.right);
     }

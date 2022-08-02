@@ -7,7 +7,7 @@ package leetcode;
  * 思路：动态规划。f(x)=f(x−1)+f(x−2)
  * 优化：自底向上。f(x-1)只和 f(x-1)与 f(x-2)有关，用三个变量表示。
  */
-public class ClimbStairs {
+public class Leetcode_70_climbStairs {
     //标准动态规划
     public int climbStairs(int n){
         //1、定义数组

@@ -10,7 +10,7 @@ import java.util.Set;
  * 问题：给定一个未排序的整数数组 nums ，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度
  * 方案：哈希表
  */
-public class longestConsecutive {
+public class Leetcode_128_longestConsecutive {
 
     public static int solution(int[] nums) {
 
@@ -40,6 +40,6 @@ public class longestConsecutive {
     public static void main(String[] args) {
         int[] nums = {100, 4, 200, 1, 3, 2};
         int[] nums2 = {0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
-        System.out.println(longestConsecutive.solution(nums2));
+        System.out.println(Leetcode_128_longestConsecutive.solution(nums2));
     }
 }

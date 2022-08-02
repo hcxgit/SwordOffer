@@ -17,7 +17,7 @@ package leetcode;
  *
  *  2、贪心法 + 二分查找
  */
-public class LengthOfLIS {
+public class Leetcode_300_lengthOfLIS {
     public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
         int res = 1;

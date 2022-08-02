@@ -3,10 +3,10 @@ package leetcode;
 /**
  * @author 三笠阿克曼
  * @date 2022/3/3
- * leetcode25:k个一组翻转链表
+ * Leetcode 25: k个一组翻转链表
  * 遍历够k个数：1、找到一组，翻转后面的 2、断开分成两部分 3、翻转当前，反转后尾部指向后面的头部
  */
-public class reverseKGroup {
+public class Leetcode_25_reverseKGroup {
     public class ListNode {
         int val;
         ListNode next;
@@ -60,7 +60,7 @@ public class reverseKGroup {
     }
 
     public static void main(String[] args) {
-        reverseKGroup r = new reverseKGroup();
+        Leetcode_25_reverseKGroup r = new Leetcode_25_reverseKGroup();
         ListNode head = r.createNode();
 //        while (head != null){
 //            System.out.println(head.val);

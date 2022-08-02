@@ -6,7 +6,7 @@ package leetcode;
  * Leetcode 53: 最大子数组和
  * 思路一：动态规划
  */
-public class MaxSubArray {
+public class Leetcode_53_maxSubArray {
 
     public int maxSubArray(int[] nums) {
 
@@ -23,7 +23,7 @@ public class MaxSubArray {
     }
 
     public static void main(String[] args) {
-        MaxSubArray case1 = new MaxSubArray();
+        Leetcode_53_maxSubArray case1 = new Leetcode_53_maxSubArray();
         int res = case1.maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4});
         System.out.println(res);
     }

@@ -12,7 +12,7 @@ package leetcode;
  *      flag = (n1+n2+flag)/10
  *
  */
-public class AddTwoNumbers {
+public class Leetcode_2_addTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = new ListNode();
         ListNode tail = head;

@@ -8,7 +8,7 @@ import java.util.HashSet;
 /**
  * @author 三笠阿克曼
  * @date 2022/4/3
- * leetcode 236：二叉树的最近公共祖先。
+ * Leetcode 236：二叉树的最近公共祖先。
  *  给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
  * 思路一：遍历，结果{子：父}放map中，然后类似找链表的公共节点，找两个节点的祖先链的交点
  * 思路二：递归 + DFS。若 root 是 p,q的最近公共祖先则
@@ -21,7 +21,7 @@ import java.util.HashSet;
  *       3、left为空 ，right不为空 ：p,q 都不在 root 的左子树中，直接返回 right;
  *       4、left不为空， right为空 ：p,q 都不在 root 的右子树中，直接返回 left；
  */
-public class LowestCommonAncestor {
+public class Leetcode_236_lowestCommonAncestor {
 
     //1、递归
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
@@ -123,7 +123,7 @@ public class LowestCommonAncestor {
         TreeNode node1 = new TreeNode(node0,node8,1);
         TreeNode p = new TreeNode(node6,node2,5);
         TreeNode root = new TreeNode(p,node1,3);
-        TreeNode res = LowestCommonAncestor.lowestCommonAncestor(root, p, q);
+        TreeNode res = Leetcode_236_lowestCommonAncestor.lowestCommonAncestor(root, p, q);
         System.out.println(res.data);
     }
 }

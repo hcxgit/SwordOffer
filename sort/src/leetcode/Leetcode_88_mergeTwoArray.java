@@ -6,7 +6,7 @@ package leetcode;
  * leetcode 88:合并两个非递减有序数组 都放到nums1
  * 思路：倒着遍历，倒着放，只要第二个数组放完了就结束了。
  */
-public class MergeTwoArray {
+public class Leetcode_88_mergeTwoArray {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
         int index1 = m-1;

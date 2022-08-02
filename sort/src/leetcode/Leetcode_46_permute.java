@@ -20,7 +20,7 @@ import java.util.List;
  *          2、【回溯】，【去掉选的数，改状态】，【选别的数】，【递归】。
  *          3、【递归终止条件】是：【一个排列中的数选够了】。
  */
-public class Permute {
+public class Leetcode_46_permute {
     public List<List<Integer>> permute(int[] nums) {
         int len = nums.length;
 

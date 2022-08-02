@@ -34,7 +34,7 @@ package leetcode;
  *           buy2 = max{buy22，sell11 - nums[i]} 前一天不动 / 第二次买
  *           sell2 = max{sell22, buy22 + numx[i]} 前一天不动 / 第二次卖
  */
-public class MaxProfit3 {
+public class Leetcode_123_maxProfit3 {
     //1、标准dp
     public int maxProfit(int[] prices) {
         int length = prices.length;

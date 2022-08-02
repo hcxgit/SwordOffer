@@ -3,9 +3,9 @@ package leetcode;
 /**
  * @author 三笠阿克曼
  * @date 2022/3/8
- * leetcode 92 ：反转链表II，反转从位置left到位置right的链表
+ * Leetcode 92 ：反转链表II，反转从位置left到位置right的链表
  */
-public class ReverseBetween {
+public class Leetcode_92_reverseBetween {
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if(head == null || head.next == null || left == right){
             return head;

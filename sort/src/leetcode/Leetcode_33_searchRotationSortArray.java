@@ -13,7 +13,7 @@ package leetcode;
  *
  *      注意：边界值
  */
-public class SearchRotationSortArray {
+public class Leetcode_33_searchRotationSortArray {
     public int search(int[] nums, int target) {
 
         int len = nums.length;

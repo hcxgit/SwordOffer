@@ -15,7 +15,7 @@ package leetcode;
  *       2、当text1[i] != text2[j]，【两字符暂时最多只有一个能在子序列中】，取最大值
  *              f[i][j] = max(f[i - 1][j],f[i][j - 1])
  */
-public class LongestCommonSubsequence {
+public class Leetcode_1143_longestCommonSubsequence {
     public int longestCommonSubsequence(String text1, String text2) {
         int len1 = text1.length();
         int len2 = text2.length();
