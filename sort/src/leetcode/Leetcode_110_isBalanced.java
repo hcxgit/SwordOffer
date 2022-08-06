@@ -16,7 +16,7 @@ import datastruct.TreeNode;
  *
  *  2、自底向上（类似后序遍历）
  *      1、先【递归】计算【左右子树】isBalanced
- *          1、【平衡】，返回【左右子树高度】，计算【当前节点】isBalanced
+ *          1、【平衡】，得到【左右子树高度】，计算【当前节点】isBalanced
  *          2、【不平衡】，返回 【-1】
 *
  */
