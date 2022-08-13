@@ -6,10 +6,11 @@ package leetcode;
  *
  * Leetcode 240: 搜索二维矩阵2
  *
- *  1、二分法
+ *  1、二分查找
+ *  2、z字形查找
  *      从【右上角开始遍历】：
  *          1、num[i][j] < target, 则往下走，i++
- *          2、num[i][j] > target, 则往左走，i++
+ *          2、num[i][j] > target, 则往左走，j--
  */
 public class Leetcode_240_searchMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
