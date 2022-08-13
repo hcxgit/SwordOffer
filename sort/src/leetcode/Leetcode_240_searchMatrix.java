@@ -10,8 +10,9 @@ package leetcode;
  *  2、二分查找
  *  3、z字形查找
  *      从【右上角开始遍历】：
- *          1、num[i][j] < target, 则往下走，i++
- *          2、num[i][j] > target, 则往左走，j--
+ *          1、num[i][j] == target，返回 true
+ *          2、num[i][j] < target, 则往下走，i++
+ *          3、num[i][j] > target, 则往左走，j--
  */
 public class Leetcode_240_searchMatrix {
     public boolean searchMatrix(int[][] matrix, int target) {
