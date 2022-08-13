@@ -6,8 +6,9 @@ package leetcode;
  *
  * Leetcode 240: 搜索二维矩阵2
  *
- *  1、二分查找
- *  2、z字形查找
+ *  1、暴力法
+ *  2、二分查找
+ *  3、z字形查找
  *      从【右上角开始遍历】：
  *          1、num[i][j] < target, 则往下走，i++
  *          2、num[i][j] > target, 则往左走，j--
