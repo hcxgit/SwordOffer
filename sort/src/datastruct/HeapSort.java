@@ -11,7 +11,7 @@ public class HeapSort {
 
     public static void heapSort(int[] arrays) {
 
-        //初始化建堆
+        //初始化建堆，从最后一个【非叶子节点】开始调整
         for (int root = arrays.length / 2 - 1; root >= 0; root--) {
             heapify(arrays, root, arrays.length - 1);
         }
