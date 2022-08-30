@@ -12,13 +12,13 @@ import java.util.concurrent.locks.ReentrantLock;
  * @date 2022/8/19
  * Leetcode 1114: 按序打印
  *
- *  1、synchronized
+ *  1、synchronized + state
  *
  *      1、synchronized(lock)
  *      2、判断state不对，则lock.wait();
  *      3、对则打印，更新state，唤醒所有的：lock.notifyAll();
  *
- *  2、lock + condition
+ *  2、lock + condition + state
  *      - 三个Condition
  *      1、lock()
  *      2、判断状态state，不对则firstCondition.await();
@@ -43,6 +43,8 @@ import java.util.concurrent.locks.ReentrantLock;
  *      - take(): 队列为null时，会【阻塞】
  *     1、first打印完，blockingQueue2.put(2), second会被【阻塞】在blockingQueue2.take()
  *     2、second打印完，blockingQueue3.put(3)，third会被【阻塞】在blockingQueue3.take()
+ *
+ *  6、yield + state
  *
  */
 public class Leetcode_1114_Foo {
@@ -206,4 +208,27 @@ public class Leetcode_1114_Foo {
         blockingQueue3.take();
         printThird.run();
     }
+
+    // 6、yield + state
+    public void first6(Runnable printFirst) throws InterruptedException {
+        printFirst.run();
+        state = 2;
+    }
+    public void second6(Runnable printSecond) throws InterruptedException {
+
+        while (state != 2){
+            Thread.yield();
+        }
+        printSecond.run();
+        state = 3;
+    }
+
+    public void third6(Runnable printThird) throws InterruptedException {
+
+        while (state != 3){
+            Thread.yield();
+        }
+        printThird.run();
+    }
+
 }
