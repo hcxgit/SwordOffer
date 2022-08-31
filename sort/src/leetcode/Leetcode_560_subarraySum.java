@@ -6,6 +6,8 @@ import java.util.HashMap;
  * @author 三笠阿克曼
  * @date 2022/8/31
  *
+ * Leetcode 560: 和为 K 的子数组
+ *
  *  1、暴力枚举
  *
  *  2、前缀和 + hash表
@@ -46,7 +48,7 @@ public class Leetcode_560_subarraySum {
         for (int i:nums) {
             preSum += i;
             if(hash.containsKey(preSum-k)){
-                res += hash.get(preSum-k); // 
+                res += hash.get(preSum-k); //
             }
             if(hash.containsKey(preSum)){
                 hash.put(preSum,hash.get(preSum)+1);
