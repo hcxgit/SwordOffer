@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99884312-bf25-48d8-a35a-e089a348343f" name="默认" comment="默认">
-      <change afterPath="$PROJECT_DIR$/ChristmasTree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChristmasTree2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sort/src/TreeTraveral.java" beforeDir="false" afterPath="$PROJECT_DIR$/sort/src/TreeTraveral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +31,7 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="bee52edd-7bdc-49fb-976f-d6235123121c" />
+  <component name="JupyterTrust" id="e3751817-2136-4ce9-88bd-263f350ac850" />
   <component name="ProjectId" id="212KSykTGteTcaxHSUZeXzl3kfW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -193,6 +190,8 @@
       <workItem from="1637133747932" duration="33000" />
       <workItem from="1639739521101" duration="25000" />
       <workItem from="1639739556214" duration="3206000" />
+      <workItem from="1680013292222" duration="120000" />
+      <workItem from="1680032048895" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="默认">
       <created>1564928302270</created>
