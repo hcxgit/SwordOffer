@@ -26,22 +26,21 @@ public class Leetcode_200_NumIslands {
 
     public void dfs(char[][] grid,int row,int line) {
 
-        //越界
-        if(!inArea(grid,row,line)){
-            return;
-        }
-        //不是陆地
-        if(grid[row][line] != '1'){
+        //1、终止条件： 结果在外层add
+        //2、剪枝：越界 || 水
+        if(!inArea(grid,row,line) || grid[row][line] != '1'){
             return;
         }
 
-        // 遍历过改为2
+        // 3、选择
+        // 1)、遍历过改为2
         grid[row][line] = '2';
-        //遍历上下左右
+        //2)、递归
         dfs(grid,row-1,line);
         dfs(grid,row+1,line);
         dfs(grid,row,line-1);
         dfs(grid,row,line+1);
+        // 3、这里不用回溯
     }
 
     //是否在网格中
