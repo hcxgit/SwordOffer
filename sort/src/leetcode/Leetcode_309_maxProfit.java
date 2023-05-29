@@ -8,9 +8,11 @@ package leetcode;
  */
 public class Leetcode_309_maxProfit {
     public int maxProfit(int[] prices) {
-        // 1、动态规划
-        // dp[i][j]: 第i天结束后的最大利润，
-        //【注意状态定义】：j表示第i天结束后的状态：0:有股票； 1:没股票，当天卖了; 2:没股票，且当天没卖
+        /**
+         * 1、动态规划
+         * dp[i][j]: 第i天结束后的最大利润，
+         *【注意状态定义】：j表示第i天结束后的状态：0:有股票； 1:没股票，当天卖了; 2:没股票，且当天没卖
+        **/
         int[][] dp = new int[prices.length][3];
         dp[0][0] = -prices[0];
         for(int i=1;i<prices.length;i++){
