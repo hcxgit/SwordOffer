@@ -17,7 +17,7 @@ public class Leetcode_494_findTargetSumWays {
          *
          * 		        dp[i−1][j] + dp[i−1][j−nums[i]],   nums[i] <= j
          *    dp[i][j] =
-         *               dp[i−1][j],   					nums[i] > j
+         *               dp[i−1][j],    					nums[i] > j
          */
         int sum = 0;
         for(int num:nums){
