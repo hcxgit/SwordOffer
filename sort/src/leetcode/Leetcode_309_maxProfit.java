@@ -4,7 +4,7 @@ package leetcode;
  * @author 三笠阿克曼
  * @date 2023/5/29
  * @description Leetcode 309: 最佳买卖股票时期含冷冻期
- *  1、dp:
+ *  1、动态规划
  */
 public class Leetcode_309_maxProfit {
     public int maxProfit(int[] prices) {
