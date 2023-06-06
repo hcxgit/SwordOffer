@@ -4,6 +4,7 @@ package leetcode;
  * @author 三笠阿克曼
  * @date 2023/6/6
  * @description Leetcode 516 : 最长回文子序列
+ *  dp
  */
 public class Leetcode_516_longestPalindromeSubseq {
     public int longestPalindromeSubseq(String s) {
