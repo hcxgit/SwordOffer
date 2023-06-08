@@ -31,7 +31,7 @@ public class Leetcode_437_pathSum {
     }
 
     /**
-     preUsed: 表示其父节点有没有使用，如果其父节点是用来，该节点也必须用
+     preUsed: 表示其父节点有没有使用
      注意：targetSum用long，防止溢出
      */
     public void dfs(TreeNode root, long targetSum, boolean preUsed) {
