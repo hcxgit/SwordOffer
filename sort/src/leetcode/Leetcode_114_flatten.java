@@ -63,16 +63,16 @@ public class Leetcode_114_flatten {
         TreeNode curr;
 
         Deque<TreeNode> stack = new LinkedList<>();
-        stack.addFirst(root);
+        stack.push(root);
         while(!stack.isEmpty()){
             // 1、出栈
-            curr = stack.removeFirst();
+            curr = stack.pop();
             // 2、右子树、左子树入栈
             if(curr.right != null){
-                stack.addFirst(curr.right);
+                stack.push(curr.right);
             }
             if(curr.left != null){
-                stack.addFirst(curr.left);
+                stack.push(curr.left);
             }
             // 3、更新head, 记得清空left、right
             curr.left = null;
