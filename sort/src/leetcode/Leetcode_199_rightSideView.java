@@ -7,17 +7,29 @@ import java.util.*;
  * @date 2023/6/18
  * @description Leetcode 199: 二叉树的右视图
  *
- *  层次遍历： 两队列
+ *  1、bfs（层次遍历）： 两队列 + map
+ *  2、dfs ： root、right、left的【类先序序遍历】
  */
 public class Leetcode_199_rightSideView {
     public List<Integer> rightSideView(TreeNode root) {
-        /**
-         层次遍历：
-            map<hight:value> ： 【树层级：最右节点的值】（每一层只能看到一个节点）
-         两个队列：
-            dq1：【树高】  dq2：【节点】
-            按照left、right顺序入队，map.put()刚好【最右边的节点会覆盖前面的值】
-         */
+        List<Integer> list = new ArrayList<>();
+
+        // 1、bfs
+        // bfs(root,list);
+
+        //2、dfs
+        dfs(root,list,0);
+        return list;
+    }
+
+    /**
+     1、bfs(层次遍历) ： 两队列 + map
+     - map： 【层级：最右节点的值】（每一层只能看到一个节点）
+     - 两个队列： dq1：树高  dq2：节点
+     -按照left、right顺序入队，map.put()刚好【最右边的节点会覆盖前面的值】
+     */
+    public void bfs(TreeNode root,List<Integer> list) {
+
         Deque<TreeNode> nodes = new LinkedList<>();
         Deque<Integer> hights = new LinkedList<>();
         Map<Integer,Integer> rightValueAtHight = new HashMap<>();
@@ -42,11 +54,25 @@ public class Leetcode_199_rightSideView {
             }
         }
 
-        List<Integer> list = new ArrayList<>();
         // 每层取对应的value
         for(int i=0;i <= hight;i++){
             list.add(rightValueAtHight.get(i));
         }
-        return list;
+    }
+
+    /**
+     2、dfs
+     - root、right、left的【类先序序遍历】
+     - 【每层树的第一个遍历到的节点】加入list
+     */
+    public void dfs(TreeNode root,List<Integer> list,int hight) {
+        if(root != null){
+            if(hight == list.size()){
+                list.add(root.val);
+            }
+
+            dfs(root.right,list,hight + 1);
+            dfs(root.left,list,hight + 1);
+        }
     }
 }
