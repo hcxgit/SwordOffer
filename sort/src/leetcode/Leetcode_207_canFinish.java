@@ -1,6 +1,6 @@
 package leetcode;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @author 三笠阿克曼
