@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class Leetcode_179_largestNumber {
     public String largestNumber(int[] nums) {
         /**
-         1、排序：倒叙
-         - a+b > b+a, 则a>b
+         1、排序：
+         - "a"+"b" > "b"+"a", 则a>b
          - Arrays.sort(str_nums,(a,b)->{return (a+b).compareTo((b+a))})
          */
 
