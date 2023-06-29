@@ -12,7 +12,7 @@ public class Leetcode_179_largestNumber {
         /**
          1、排序：
          - "a"+"b" > "b"+"a", 则a>b
-         - Arrays.sort(str_nums,(a,b)->{return (a+b).compareTo((b+a))})
+         - Arrays.sort(str_nums,(a,b)->{return (b+a).compareTo((a+b))})
          */
 
         String[] strs = new String[nums.length];
