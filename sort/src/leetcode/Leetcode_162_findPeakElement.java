@@ -23,4 +23,9 @@ public class Leetcode_162_findPeakElement {
         }
         return left;
     }
+
+    public static void main(String[] args) {
+        char c = '1';
+        System.out.println(Character.toLowerCase(c));
+    }
 }

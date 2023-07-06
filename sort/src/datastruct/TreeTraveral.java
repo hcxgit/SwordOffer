@@ -23,7 +23,7 @@ public class TreeTraveral {
         }
     }
 
-    //先序遍历：非递归   1、访问根节点 2、右子树压栈，左子树压栈 3、出栈
+    //先序遍历：非递归（栈）   1、访问根节点 2、右子树压栈，左子树压栈 3、出栈
     public static void preOrder2(TreeNode root, ArrayList<Integer> list) {
         if (root == null) {
             return;
@@ -109,7 +109,7 @@ public class TreeTraveral {
         return res;
     }
 
-    //层序遍历
+    //层序遍历（队列）
     public static void levelOrder(TreeNode root, ArrayList<Integer> res) {
         if (root == null) {
             return;
