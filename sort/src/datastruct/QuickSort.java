@@ -34,7 +34,7 @@ public class QuickSort {
         int rightIndex = right;
         //双指针碰撞时，退出循环
         while (leftIndex < rightIndex) {
-        // 左边找大于基准值，右边找小于基准值，交换(注意：升序从右边开始扫描，降序从左边开始扫描)
+        // 左边找大于基准值，右边找小于基准值，交换(注意：升序从右边开始扫描，降序从左边开始扫描，因为最后的数要和left交换，这个会影响升降序)
             while (leftIndex < rightIndex && arrays[rightIndex] >= mid) {
                 rightIndex -= 1;
             }
