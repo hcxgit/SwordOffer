@@ -1,5 +1,8 @@
 package leetcode;
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 
 /**
@@ -39,7 +42,8 @@ public class Leetcode_347_topKFrequent {
         PriorityQueue<Map.Entry<Integer,Integer>> queue = new PriorityQueue<>(k,(a,b) -> {
             return a.getValue()-b.getValue();
         });
-
+        LocalDate nextSunday = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+        Optional.ofNullable().orElseThrow()
         for(Map.Entry<Integer,Integer> entry:map.entrySet()){
 
             // 1、队列还没满，直接入队
