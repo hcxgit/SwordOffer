@@ -5,10 +5,10 @@ package leetcode;
  * @date 2023/8/10
  * @description Leetcode 208：实现Trie(前缀树)
  *  1、字典树
- *       - 26叉树，用数组实现
- *       - 每个节点存字符，字符串就是从root开始遍历
- *       - 节点中有属性isEnd：表示是否是字符串尾字符
- *          - 例如有abc和ab字符串，则到b和c节点的isEnd都是true
+ *       - 本质是【26叉树】，用【数组】实现。
+ *          - 数组的【每个节点对应一个字符】，字符串就是【从root开始遍历】。
+ *          - 节点中有属性【isEnd】：表示是否是【字符串尾字符】。
+ *              - 例如有abc和ab字符串，则到b和c节点的isEnd都是true。
  */
 public class Leetcode_208_Trie {
 
