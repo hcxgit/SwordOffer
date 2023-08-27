@@ -16,9 +16,16 @@ package leetcode;
  *     综上：dp[i] = max(dp[j])+1, 其中 0≤j<i 且 num[j]<num[i]
  *
  *  2、贪心法 + 二分查找
+ *
+ *      - 思想 : 让递增子序列【增得慢】，因此希望【每次】递增子序列【最后加的数尽可能小】
+ *      - d[i] : 【长度为i】的最长递增子序列的【末尾元素】
+ *      - len : 【目前】最长上升子序列的【长度】
+ *          - 对于每个num:
+ *              - 如果num > d[len],则更新d[++len] = num
+ *              - 否则，【二分查找】，找到第一个比num大的数，更新d[j] = num
  */
 public class Leetcode_300_lengthOfLIS {
-    public int lengthOfLIS(int[] nums) {
+    public int lengthOfLIS_1(int[] nums) {
         int[] dp = new int[nums.length];
         int res = 1;
         for (int i = 0; i < nums.length; i++) {
@@ -32,5 +39,34 @@ public class Leetcode_300_lengthOfLIS {
             res = Math.max(res,dp[i]);
         }
         return res;
+    }
+
+    /**
+     2、贪心法 + 二分查找
+     */
+    public int lengthOfLIS(int[] nums) {
+        int d[] = new int[nums.length +1];
+        d[0] = Integer.MIN_VALUE;
+        int len = 0;
+
+        for(int num:nums){
+            if(num > d[len]){
+                // 直接添加
+                d[++len] = num;
+            }else{
+                // 二分查找更新
+                int l=1,r=len;
+                while(l < r){
+                    int mid = l + (r-l)/2;
+                    if(d[mid] < num){
+                        l = mid+1;
+                    }else{
+                        r = mid;
+                    }
+                }
+                d[l] = num;
+            }
+        }
+        return len;
     }
 }
