@@ -22,7 +22,7 @@ package leetcode;
  *      - len : 【目前】最长上升子序列的【长度】
  *          - 对于每个num:
  *              - 如果num > d[len],则更新d[++len] = num
- *              - 否则，【二分查找】，找到第一个比num大的数，更新d[j] = num
+ *              - 否则，【二分查找】，找到【第一个比num大的数，并替换】：d[j] = num
  */
 public class Leetcode_300_lengthOfLIS {
     public int lengthOfLIS_1(int[] nums) {
@@ -54,7 +54,7 @@ public class Leetcode_300_lengthOfLIS {
                 // 直接添加
                 d[++len] = num;
             }else{
-                // 二分查找更新
+                // 二分查找，替换
                 int l=1,r=len;
                 while(l < r){
                     int mid = l + (r-l)/2;
