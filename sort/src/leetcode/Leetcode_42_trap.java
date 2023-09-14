@@ -98,14 +98,17 @@ public class Leetcode_42_trap {
         leftMax[0] = height[0];
         rightMax[len-1] = height[len-1];
 
+        // 更新左边最高值
         for (int i = 1; i < len; i++) {
             leftMax[i] = Math.max(leftMax[i-1],height[i]);
         }
 
+        // 更新右边最高值
         for (int i = len-2; i >=0 ; i--) {
             rightMax[i] = Math.max(rightMax[i+1],height[i]);
         }
 
+        // 第i列积水：min(leftmax,rightmax) - height[i]
         for (int i = 0; i < len; i++) {
             res += Math.min(leftMax[i], rightMax[i]) - height[i];
         }

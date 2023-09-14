@@ -51,7 +51,7 @@ public class Leetcode_123_maxProfit3 {
                 if(k !=0){ //注意边界值
                     dp[i][0][k] = Math.max(dp[i-1][0][k], dp[i-1][1][k-1] + prices[i]);
                 }else{
-                    dp[i][0][k] = dp[i-1][0][k];
+                    dp[i][0][0] = 0;
                 }
                 dp[i][1][k] = Math.max(dp[i-1][1][k], dp[i-1][0][k] - prices[i]);
             }
